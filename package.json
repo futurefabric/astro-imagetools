@@ -1,5 +1,6 @@
 {
   "name": "@futurefabric/astro-imagetools",
+  "version": "0.0.1",
   "scripts": {
     "lint": "eslint .",
     "format": "prettier . --write",
