@@ -138,7 +138,7 @@ declare type breakpointsFunction = {
 declare interface PrimaryProps {
   src: string;
   sizes?: string | sizesFunction;
-  placeholder?: "dominantColor" | "blurred" | "tracedSVG" | "none";
+  placeholder?: "dominantColor" | "customColor" | "blurred" | "tracedSVG" | "none";
   breakpoints?:
     | number[]
     | breakpointsFunction
@@ -151,6 +151,7 @@ declare interface PrimaryProps {
 
 declare interface ConfigOptions extends PrimaryProps, ImageToolsConfigs {
   alt: string;
+  customColor?: string;
   preload?: format;
   loading?: "lazy" | "eager" | "auto" | null;
   decoding?: "async" | "sync" | "auto" | null;

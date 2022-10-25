@@ -11,6 +11,7 @@ export default async function getImageSources(
   imagesizes,
   breakpoints,
   placeholder,
+  customColor,
   imageFormat,
   formatOptions,
   fallbackFormat,
@@ -63,6 +64,7 @@ export default async function getImageSources(
   const fallback = await getFallbackImage(
     src,
     placeholder,
+    customColor,
     image,
     fallbackFormat,
     formatOptions,
