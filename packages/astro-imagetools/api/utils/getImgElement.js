@@ -61,6 +61,7 @@ export default function getImgElement({
 
   const imgElement = `<img
     ${attributesString}
+    onload="${onloadAttribute}"
     src="${src}"
     ${typeof alt === "string" ? `alt="${alt}"` : ""}
     srcset="${srcset}"
@@ -71,7 +72,6 @@ export default function getImgElement({
     ${decoding ? `decoding="${decoding}"` : ""}
     class="${classAttribute}"
     style="${styleAttribute}"
-    onload="${onloadAttribute}"
   />`;
 
   return imgElement;
