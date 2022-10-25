@@ -43,7 +43,7 @@ export default function getImgElement({
     .trim();
 
   const styleAttribute = [
-    "display: inline-block; overflow: hidden; vertical-align: middle;",
+    "display: inline-block; overflow: hidden; vertical-align: middle; opacity: 0;",
     customInlineStyles + (customInlineStyles.endsWith(";") ? "" : ";"),
     layoutStyles,
   ]
@@ -52,7 +52,7 @@ export default function getImgElement({
 
   const onloadAttribute = [
     !imgClassName && style && fadeInTransition
-      ? `parentElement.style.setProperty('--z-index', 1);parentElement.style.setProperty('--opacity', 0);`
+      ? `parentElement.style.setProperty('--z-index', 1);parentElement.style.setProperty('--opacity', 0);this.style.setProperty('opacity', 1);`
       : "",
     customOnload,
   ]
